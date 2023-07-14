@@ -38,4 +38,6 @@ SELECT COUNT(*) from inhabitant where villageid = 3 and gender = 'f'
 
 SELECT name from inhabitant where villageid = 3 and gender = 'f'
 
--- last select case statement that i stayed : Oh no, baking bread alone can't solve my problems. 
+SELECT SUM(inhabitant.gold) FROM inhabitant  WHERE job = 'baker' OR job = 'dealer'  OR job = 'merchant'
+
+SELECT state, AVG(gold) FROM inhabitant GROUP BY state order by AVG(gold)
